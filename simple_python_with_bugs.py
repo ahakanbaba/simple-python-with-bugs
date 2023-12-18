@@ -2,6 +2,9 @@ def atoi(s: str) -> int:
     if not s:
         raise ValueError("Input string is empty")
 
+    if "." in s:
+        raise RuntimeError("Input string is a float, only integers are supported")
+
     num = 0
     start = 0
     negative = False
